@@ -1,5 +1,4 @@
-import { test, expect, selectors } from '@playwright/test';
-import { faker } from '@faker-js/faker';
+import { test, selectors } from '@playwright/test';
 
 const LOGIN = 'standard_user';
 const PASSWORD = 'secret_sauce';
@@ -8,11 +7,7 @@ const LASTNAME = 'Souza';
 const ZIPCODE = '85811140';
 
 test.beforeEach(async ({ page }) => {
-
-    selectors.setTestIdAttribute(
-        'data-test'
-    )
-
+    selectors.setTestIdAttribute('data-test')
     await page.goto('https://www.saucedemo.com/v1/');
 });
 
